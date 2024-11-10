@@ -413,7 +413,7 @@ header {
                 font-family: "Protest Guerrilla", sans-serif;
                 text-align: left;
                 /* defult font size * 3 */
-                font-size: 3em;
+                font-size: clamp(1rem, 2vw + 1rem, 3rem);
                 margin: 50px;
                 transition: 0.5s ease;
 
