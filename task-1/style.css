@@ -20,9 +20,12 @@ body {
     /* defult font size */
     font-size: 1em; 
     font-family: "Josefin Sans", serif;
+    /* transitions I just added to make the transitions to other sizes smooth */
+    transition: 0.5s ease;
 }
 
 
+/* I wanted to try a technique i saw on yt where the css gets nested. It makes it look more organized for me */
 
 /* HEADER */
 header {
@@ -32,7 +35,9 @@ header {
     flex-direction: column;
     align-items: center;
 
-    padding: 12px;
+    /* following the standard spacing, all mobile gaps, padding and margins are 12px */
+    padding: 12px; 
+    transition: 0.5s ease;
 
     .logo { /* CSS inside the header */
         width: 80px;
@@ -40,6 +45,7 @@ header {
     
         margin-bottom: 12px;
         border-radius: 100%;
+        transition: 0.5s ease;
 
         svg {
             width: 100%;
@@ -57,6 +63,7 @@ header {
         /* removes the defult padding of unordered lists */
         padding: 0;
         margin: 0;
+        transition: 0.5s ease;
     }
 }
 
@@ -68,6 +75,7 @@ header {
     p {
         font-size: 1em;
         padding: 12px;
+        transition: 0.5s ease;
     }
     h1 {
         font-family: "Protest Guerrilla", sans-serif;
@@ -75,6 +83,7 @@ header {
         /* defult font size * 3 */
         font-size: 3em;
         margin: 12px 0;
+        transition: 0.5s ease;
     }
 
     /* gallery */
@@ -99,12 +108,15 @@ header {
         flex-direction: column;
         align-items: center;
 
+        transition: 0.5s ease;
+
 
         .author-img {
             width: 200px;
             height: 200px;
 
             margin-top: 12px;
+            transition: 0.5s ease;
             
             img {
                 width: 100%;
@@ -116,6 +128,7 @@ header {
         .about-container {
             p {
                 padding: 0 12px;
+                transition: 0.5s ease;
             }
         }
     }
@@ -124,10 +137,12 @@ header {
         padding: 12px;
         border-top: solid black 1px;
         text-align: center;
+        transition: 0.5s ease;
     
         p {
             padding: 0;
             margin: 0;
+            transition: 0.5s ease;
         }
     }
     
@@ -139,19 +154,21 @@ header {
 
 /* MEDIA CSS */
 
+
 /* Large Mobile: 540px - 720px */
 @media (min-width: 540px) and (max-width: 720px) {
 
     /* not much changes in large moble except the standard spacing*/
     body {
-        transition: 1s ease;
+        transition: 0.5s ease;
     }
 
     .container {
         /* texts */
         p {
+            /* large mobile gaps, margins and padding is 20px */
             padding: 20px;
-            transition: 1s ease;
+            transition: 0.5s ease;
         }
         h1 {
             font-family: "Protest Guerrilla", sans-serif;
@@ -159,24 +176,24 @@ header {
             /* defult font size * 3 */
             font-size: 3em;
             margin: 20px 0;
-            transition: 1s ease;
+            transition: 0.5s ease;
         }
         .about {
             .author-img {
                 margin-top: 20px;
-                transition: 1s ease;
+                transition: 0.5s ease;
             }
     
             .about-container {
                 p {
                     padding: 0 20px;
-                    transition: 1s ease;
+                    transition: 0.5s ease;
                 }
             }
         }    
         footer {
             padding: 20px;
-            transition: 1s ease;
+            transition: 0.5s ease;
         }    
     }
     
@@ -184,28 +201,32 @@ header {
 
 /* Tablet: 720px - 1024px */
 @media (min-width: 720px) and (max-width: 1024px) {
+    /* tablet added a border and made the contents centre */
     body {
         background-color: var(--page-bg); 
-        transition: 1s ease;
+        transition: 0.5s ease;
     }
 
     main {
+        /* made the main contents in the centre using flex */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: 1s ease;
+        transition: 0.5s ease;
     }
 
     .container {
+        /* decreased the size to not take the whole width */
         width: 80%;
+        /* added a small border like the wireframe */
         border: solid black 1.5px;
-        transition: 1s ease;
+        transition: 0.5s ease;
 
         /* texts */
         p {
             padding: 0 30px;
-            transition: 1s ease;
+            transition: 0.5s ease;
         }
         h1 {
             font-family: "Protest Guerrilla", sans-serif;
@@ -213,7 +234,7 @@ header {
             /* defult font size * 3 */
             font-size: 3em;
             margin: 30px 0;
-            transition: 1s ease;
+            transition: 0.5s ease;
 
         }
 
@@ -221,10 +242,11 @@ header {
         .albums {
             width: 100%;
 
+            /* the album covers changed to 4x4 */
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
-            transition: 1s ease;
+            transition: 0.5s ease;
 
 
             img {
@@ -242,14 +264,15 @@ header {
             justify-content: center;
 
             margin: 30px;
+            transition: 0.5s ease;
 
 
             .author-img {
-                transition: 1s ease;
                 margin: 0;
 
                 width: 200px;
                 height: 200px;
+                transition: 0.5s ease;
                     
                 img {
                     width: 100%;
@@ -267,6 +290,8 @@ header {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+
+                transition: 0.5s ease;
                 
                 h1 {
                     margin: 0;
@@ -278,14 +303,14 @@ header {
                     padding: 0;
 
                     padding: 0 30px;
-                    transition: 1s ease;
+                    transition: 0.5s ease;
                 }
             }   
         } 
         
         footer {
             padding: 30px;
-            transition: 1s ease;
+            transition: 0.5s ease;
         }
     }
 }
@@ -298,7 +323,9 @@ header {
     body {
         background-color: var(--page-bg); 
 
+        /* increased the defult font size for better readability */
         font-size: 1.5em;
+        transition: 0.5s ease;
     }
 
     /* grid area keys for desktop */
@@ -323,7 +350,7 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: 1s ease;
+        transition: 0.5s ease;
     }
 
     header {
@@ -331,27 +358,28 @@ header {
             width: 200px;
             height: 200px;
 
+            /* by standard spacing, the gaps, padding, and margins is now 50px */
             margin: 50px 0;
-            transition: 1s ease;
+            transition: 0.5s ease;
         }
 
         .nav {
             font-size: 1em;
 
             margin-bottom: 50px;
-            transition: 1s ease;
+            transition: 0.5s ease;
         }
     }
 
     .container {
         width: 80%;
         border: solid black 1.5px;
-        transition: 1s ease;
+        transition: 0.5s ease;
 
         /* texts */
         p {
             padding: 0 30px;
-            transition: 1s ease;
+            transition: 0.5s ease;
         }
         h1 {
             font-family: "Protest Guerrilla", sans-serif;
@@ -359,16 +387,17 @@ header {
             /* defult font size * 3 */
             font-size: 3em;
             margin: 50px;
-            transition: 1s ease;
+            transition: 0.5s ease;
 
             /* Biggwer tittle font size */
             span {
                 font-size: 2.5em;
-                transition: 1s ease;
+                transition: 0.5s ease;
             }
         }
         
         .title {
+            margin: 50px 0px;
             /* texts defult*/
             p {
                 /* cause the wireframe said so */
@@ -376,7 +405,7 @@ header {
 
                 padding: 0 50px;
                 margin: 0;
-                transition: 1s ease;
+                transition: 0.5s ease;
                 text-align: left;
 
             }
@@ -386,34 +415,33 @@ header {
                 /* defult font size * 3 */
                 font-size: 3em;
                 margin: 50px;
-                transition: 1s ease;
+                transition: 0.5s ease;
 
                 /* Biggwer tittle font size */
                 span {
                     font-size: 2.5em;
-                    transition: 1s ease;
+                    transition: 0.5s ease;
                 }
             }
         }
 
         /* grid */
         article {
-
-
             margin: 50px;
             column-count: 3; /* Create three columns */
             column-gap: 50px; /* Space between columns */
+            transition: 0.5s ease;
 
             h1 {
                 margin: 0;
-                transition: 1s ease;
+                transition: 0.5s ease;
             }
 
             p {
     
                 padding: 0;
                 margin: 0;
-                transition: 1s ease;
+                transition: 0.5s ease;
             }
         }
 
@@ -432,7 +460,7 @@ header {
             'album1 album1 album4 album5'
             ;
 
-            transition: 1s ease;
+            transition: 0.5s ease;
 
             .big-pic {
                 display: block;
@@ -449,14 +477,15 @@ header {
             display: flex;
 
             flex-direction: row-reverse;
-            align-items: end;
+            align-items: center;
             justify-content: center;
 
-            margin: 30px;
+            margin: 50px;
+            transition: 0.5s ease;
 
 
             .author-img {
-                transition: 1s ease;
+                transition: 0.5s ease;
                 margin: 0;
 
                 width: 200px;
@@ -472,7 +501,7 @@ header {
             .about-container {
                 width: 50vw;
 
-                margin: 30px 0;
+                margin: 50px 0;
 
                 display: flex;
                 flex-direction: column;
@@ -485,18 +514,19 @@ header {
                 }
 
                 p {
+                    width: 70%;
                     margin: 0px;
                     padding: 0;
 
                     padding: 0 30px;
-                    transition: 1s ease;
+                    transition: 0.5s ease;
                 }
             }   
         } 
         
         footer {
             padding: 50px;
-            transition: 1s ease;
+            transition: 0.5s ease;
         }
     }
 }
