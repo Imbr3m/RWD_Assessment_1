@@ -19,6 +19,7 @@ body {
 
     /* bacgkround */
     background-color: var(--clr1);
+    transition: 0.5s ease;
 }
 
 /* header font defults and mobile */
@@ -28,6 +29,7 @@ h1 {
 
     font-size: 2em;
     font-family: "Teko", sans-serif;
+    transition: 0.5s ease;
 }
 button {
     font-size: 2em;
@@ -38,6 +40,7 @@ button {
 p {
     font-size: 1em;
     font-family: "Lato", sans-serif;
+    transition: 0.5s ease;
 }
 
 
@@ -47,6 +50,7 @@ header {
     border-bottom: var(--clr1) solid 1px;
 
     background-color: var(--clr3);
+    transition: 0.5s ease;
 
     nav {
         display: flex;
@@ -55,14 +59,20 @@ header {
 
         /* so i just put color in header */
         background: none;
+        transition: 0.5s ease;
     
         .logo {
             height: fit-content;
             color: var(--clr2);
         }
+        .logo:hover {
+            cursor: pointer;
+            color: var(--clr5);
+        }
 
         .nav-bar {
             display: none;
+            transition: 0.5s ease;
             ul {
                 display: flex; /* Change from grid to flex */
                 gap: 16px; /* Add space between list items */
@@ -71,6 +81,7 @@ header {
                 text-align: center;
                 padding: 0;
                 margin: 0;
+                transition: 0.5s ease;
             }
         }
     
@@ -79,6 +90,11 @@ header {
             border-radius: 16px;
 
             line-height: 16px;
+            transition: 0.5s ease;
+        }
+        button:hover {
+            cursor: pointer;
+            background-color: var(--clr5);
         }
     }    
 }
@@ -94,6 +110,7 @@ main {
 
         /* for spacing in top and bottom */
         margin: 16px 0;
+        transition: 0.5s ease;
 
         .movie-card {
             display: grid;
@@ -104,6 +121,7 @@ main {
 
             border: solid var(--clr1) 2px;
             background-color: var(--clr3);
+            transition: 0.5s ease;
 
 
             /* Movie Cover Img */
@@ -111,6 +129,7 @@ main {
                 img {
                     width: 100%;
                     height: auto;
+                    transition: 0.5s ease;
                 }
             }
 
@@ -119,6 +138,7 @@ main {
                 display: grid;
                 grid-template-columns: 1fr;
                 row-gap: 16px;
+                transition: 0.5s ease;
 
                 p {
                     .title {
@@ -126,11 +146,17 @@ main {
                         font-family: "Teko", sans-serif;
                         font-weight: bold;
                         color: var(--clr2);
+                        transition: 0.5s ease;
+                    }
+                    .title:hover {
+                        cursor: pointer;
+                        color: var(--clr5);
                     }
 
                     color: var(--clr2);
                     font-size: 1.5em;
                     margin: 0 16px;
+                    transition: 0.5s ease;
                 }
 
                 /* WATCH NOW button */
@@ -140,6 +166,11 @@ main {
                     padding: 16px 0;
                     margin: 16px;
                     border-radius: 16px;
+                    transition: 0.5s ease;
+                }
+                button:hover {
+                    cursor: pointer;
+                    background-color: var(--clr5);
                 }
             }
         }
@@ -160,11 +191,13 @@ main {
 @media (min-width: 720px) and (max-width: 1024px) {
     body {
         background-color: var(--clr4);
+        transition: 0.5s ease;
     }
 
     /* tablet headers should be 3em */
     h1 {
         font-size: 3em;
+        transition: 0.5s ease;
     }
 
     header {
@@ -172,6 +205,7 @@ main {
         border-bottom: var(--clr1) solid 1px;
     
         background-color: var(--clr3);
+        transition: 0.5s ease;
     
         nav {
             display: flex;
@@ -180,13 +214,20 @@ main {
     
             /* so i just put color in header */
             background: none;
+            transition: 0.5s ease;
         
             .logo {
                 color: var(--clr2);
+                transition: 0.5s ease;
+            }
+            .logo:hover {
+                cursor: grabbing;
+                color: var(--clr4);
             }
     
             .nav-bar {
                 display: block;
+                transition: 0.5s ease;
                 ul {
                     display: flex; /* Change from grid to flex */
                     gap: 32px; /* as specified 32 */
@@ -195,12 +236,21 @@ main {
                     text-align: center;
                     padding: 0;
                     margin: 0;
+                    transition: 0.5s ease;
+                }
+                li:hover {
+                    cursor: pointer;
+                    color: var(--clr5);
                 }
             }
         
             button {
                 padding: 16px;
                 border-radius: 16px;
+            }
+            button:hover {
+                cursor: pointer;
+                background-color: var(--clr5);
             }
         }    
     }
@@ -210,6 +260,8 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        transition: 0.5s ease;
         
 
         .container {
@@ -228,6 +280,7 @@ main {
             /* cards gap */
             row-gap: 32px;
             column-gap: 32px;
+            transition: 0.5s ease;
     
 
             .movie-card {
@@ -239,6 +292,7 @@ main {
     
                 border: solid var(--clr1) 2px;
                 background-color: var(--clr3);
+                transition: 0.5s ease;
     
     
                 /* Movie Cover Img */
@@ -246,6 +300,7 @@ main {
                     img {
                         width: 100%;
                         height: auto;
+                        transition: 0.5s ease;
                     }
                 }
     
@@ -254,6 +309,7 @@ main {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    transition: 0.5s ease;
                     
     
 
@@ -263,6 +319,11 @@ main {
                             font-family: "Teko", sans-serif;
                             font-weight: bold;
                             color: var(--clr2);
+                            transition: 0.5s ease;
+                        }
+                        .title:hover {
+                            cursor: pointer;
+                            color: var(--clr5);
                         }
                         /* because its keeps being inconsistent */
                         min-height: 260px;
@@ -270,6 +331,7 @@ main {
                         color: var(--clr2);
                         font-size: 1.5em;
                         margin: 0 16px;
+                        transition: 0.5s ease;
                     }
     
                     /* WATCH NOW button */
@@ -281,6 +343,11 @@ main {
                         padding: 16px 0;
                         margin: 16px;
                         border-radius: 16px;
+                        transition: 0.5s ease;
+                    }
+                    button:hover {
+                        cursor: pointer;
+                        background-color: var(--clr5);
                     }
                 }
             }
@@ -298,6 +365,7 @@ main {
 @media (min-width: 1024px) {
     body {
         background-color: var(--clr3);
+        transition: 0.5s ease;
     }
 
     /* grid template area assigning */
@@ -320,7 +388,7 @@ main {
         grid-area: card6;
     }
 
-    /* tablet headers should be 3em */
+    /* desktop headers should be 3em */
     h1 {
         font-size: 3em;
     }
@@ -330,6 +398,7 @@ main {
         border-bottom: var(--clr1) solid 1px;
     
         background-color: var(--clr4);
+        transition: 0.5s ease;
     
         nav {
             display: flex;
@@ -338,27 +407,43 @@ main {
     
             /* so i just put color in header */
             background: none;
+            transition: 0.5s ease;
         
             .logo {
                 color: var(--clr2);
+                transition: 0.5s ease;
+            }
+            .logo:hover {
+                cursor: grabbing;
+                color: var(--clr3);
             }
     
             .nav-bar {
                 display: block;
                 ul {
-                    display: flex; /* Change from grid to flex */
+                    display: flex; 
                     gap: 48px; /* as specified 48 */
                     list-style: none;
                     color: var(--clr2);
                     text-align: center;
                     padding: 0;
                     margin: 0;
+                    transition: 0.5s ease;
+                }
+                li:hover {
+                    cursor: pointer;
+                    color: var(--clr3);
                 }
             }
         
             button {
                 padding: 16px;
                 border-radius: 16px;
+                transition: 0.5s ease;
+            }
+            button:hover {
+                cursor: pointer;
+                background-color: var(--clr5);
             }
         }    
     }
@@ -368,6 +453,7 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        transition: 0.5s ease;
         
 
         .container {
@@ -394,6 +480,7 @@ main {
             'card5 card5'
             'card6 card6'
             ;
+            transition: 0.5s ease;
 
             /* idk i have to make an individual css for each cards */
             #card1 {
@@ -402,24 +489,29 @@ main {
                 .img-container {
                     height: 200px;
                     overflow: hidden;
+                    transition: 0.5s ease;
                     img {
                         object-fit: cover;
                         object-position: center;
                         width: 100%;
                         height: 100%;
+                        transition: 0.5s ease;
                     }
                 }
                 .movie-details {
                     display: flex;
                     flex-direction: row;
+                    transition: 0.5s ease;
                     p {
                         /* this takes 2/3rds i guess */
                         flex: 2;
+                        transition: 0.5s ease;
                     }
                     /* WATCH NOW button */
                     button {
                         /* this takes 1/3 */
                         flex: 1;
+                        transition: 0.5s ease;
                     }
                 }
             }
@@ -428,11 +520,11 @@ main {
 
                 display: grid;
                 grid-template-columns: 1.5fr 1fr;
+                transition: 0.5s ease;
 
                 
             }
     
-
             .movie-card {
                 display: grid;
                 grid-template-columns: 1fr;
@@ -444,7 +536,8 @@ main {
                 background-color: var(--clr1);
 
                 /* shadow */
-                box-shadow: 16px 16px 16px var(--clr5);
+                box-shadow: 16px 16px 16px var(--clr4);
+                transition: 0.5s ease;
     
     
                 /* Movie Cover Img */
@@ -452,6 +545,7 @@ main {
                     img {
                         width: 100%;
                         height: auto;
+                        transition: 0.5s ease;
                     }
                 }
     
@@ -460,6 +554,7 @@ main {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-evenly;
+                    transition: 0.5s ease;
                     
     
                     p {
@@ -468,6 +563,11 @@ main {
                             font-family: "Teko", sans-serif;
                             font-weight: bold;
                             color: var(--clr2);
+                            transition: 0.5s ease;
+                        }
+                        .title:hover {
+                            cursor: pointer;
+                            color: var(--clr5);
                         }
                         /* because its keeps being inconsistent */
                         min-height: 260px;
@@ -475,6 +575,7 @@ main {
                         color: var(--clr2);
                         font-size: 1.5em;
                         margin: 0 16px;
+                        transition: 0.5s ease;
                     }
     
                     /* WATCH NOW button */
@@ -486,8 +587,16 @@ main {
                         padding: 16px 0;
                         margin: 16px;
                         border-radius: 16px;
+                        transition: 0.5s ease;
+                    }
+                    button:hover {
+                        cursor: pointer;
+                        background-color: var(--clr5);
                     }
                 }
+            }
+            .movie-card:hover {
+                box-shadow: 16px 16px 16px var(--clr5);
             }
         }
     } 
