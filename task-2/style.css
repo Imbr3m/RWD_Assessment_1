@@ -1,0 +1,446 @@
+/* Font google import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
+
+/* colors */
+:root {
+    --clr1: #070410;
+    --clr2: #ffffff;
+    --clr3: #231651;
+    --clr4: #4dccbd;
+    --clr5: #eef36a;
+}
+
+/* defult margins */
+body {
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
+
+    /* bacgkround */
+    background-color: var(--clr1);
+}
+
+/* header font defults and mobile */
+h1 {
+    margin: 0;
+    padding: 0;
+
+    font-size: 2em;
+    font-family: "Teko", sans-serif;
+}
+button {
+    font-size: 2em;
+
+    letter-spacing: 0;
+    font-family: "Teko", sans-serif;
+}
+p {
+    font-size: 1em;
+    font-family: "Lato", sans-serif;
+}
+
+
+/*HEADER AND NAVIGATION */
+header {
+    padding: 16px;
+    border-bottom: var(--clr1) solid 1px;
+
+    background-color: var(--clr3);
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        /* so i just put color in header */
+        background: none;
+    
+        .logo {
+            height: fit-content;
+            color: var(--clr2);
+        }
+
+        .nav-bar {
+            display: none;
+            ul {
+                display: flex; /* Change from grid to flex */
+                gap: 16px; /* Add space between list items */
+                list-style: none;
+                color: var(--clr2);
+                text-align: center;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    
+        button {
+            padding: 16px;
+            border-radius: 16px;
+
+            line-height: 16px;
+        }
+    }    
+}
+
+/* MAIN CONTENT */
+main {
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* cards gap */
+        row-gap: 16px;
+
+        /* for spacing in top and bottom */
+        margin: 16px 0;
+
+        .movie-card {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 16px;
+
+            width: 100%;
+
+            border: solid var(--clr1) 2px;
+            background-color: var(--clr3);
+
+
+            /* Movie Cover Img */
+            .img-container {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            /* Details of the movie */
+            .movie-details {
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 16px;
+
+                .title {
+                    color: var(--clr2);
+                    margin: 0 16px;
+                }
+                p {
+                    color: var(--clr2);
+                    font-size: 1.5em;
+                    margin: 0 16px;
+                }
+
+                /* WATCH NOW button */
+                button {
+                    background-color: var(--clr4);
+
+                    padding: 16px 0;
+                    margin: 16px;
+                    border-radius: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+/* MEDIA CSS */
+
+/* Tablet 720px-1024px */
+@media (min-width: 720px) and (max-width: 1024px) {
+    body {
+        background-color: var(--clr4);
+    }
+
+    /* tablet headers should be 3em */
+    h1 {
+        font-size: 3em;
+    }
+
+    header {
+        padding: 16px;
+        border-bottom: var(--clr1) solid 1px;
+    
+        background-color: var(--clr3);
+    
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            /* so i just put color in header */
+            background: none;
+        
+            .logo {
+                color: var(--clr2);
+            }
+    
+            .nav-bar {
+                display: block;
+                ul {
+                    display: flex; /* Change from grid to flex */
+                    gap: 32px; /* as specified 32 */
+                    list-style: none;
+                    color: var(--clr2);
+                    text-align: center;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        
+            button {
+                padding: 16px;
+                border-radius: 16px;
+            }
+        }    
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+
+            /* Ensures padding is included within the max-width */
+            box-sizing: border-box;
+            /* for spacing */
+            padding: 32px;
+    
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            /* cards gap */
+            row-gap: 32px;
+            column-gap: 32px;
+    
+
+            .movie-card {
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 16px;
+    
+                width: 100%;
+    
+                border: solid var(--clr1) 2px;
+                background-color: var(--clr3);
+    
+    
+                /* Movie Cover Img */
+                .img-container {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+    
+                /* Details of the movie */
+                .movie-details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    
+    
+                    .title {
+                        color: var(--clr2);
+                        margin: 0 16px;
+                    }
+                    p {
+                        /* because its keeps being inconsistent */
+                        min-height: 260px;
+
+                        color: var(--clr2);
+                        font-size: 1.5em;
+                        margin: 0 16px;
+                    }
+    
+                    /* WATCH NOW button */
+                    button {
+                        background-color: var(--clr4);
+    
+
+                        line-height: 1.5; 
+                        padding: 16px 0;
+                        margin: 16px;
+                        border-radius: 16px;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+
+
+
+
+
+/* Desktop 1024px and up */
+@media (min-width: 1024px) {
+    body {
+        background-color: var(--clr4);
+    }
+
+    /* grid template area assigning */
+    #card1 {
+        grid-area: card1;
+    }
+    #card2 {
+        grid-area: card2;
+    }
+    #card3 {
+        grid-area: card3;
+    }
+    #card4 {
+        grid-area: card4;
+    }
+    #card5 {
+        grid-area: card5;
+    }
+    #card6 {
+        grid-area: card6;
+    }
+
+    /* tablet headers should be 3em */
+    h1 {
+        font-size: 3em;
+    }
+
+    header {
+        padding: 16px;
+        border-bottom: var(--clr1) solid 1px;
+    
+        background-color: var(--clr3);
+    
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            /* so i just put color in header */
+            background: none;
+        
+            .logo {
+                color: var(--clr2);
+            }
+    
+            .nav-bar {
+                display: block;
+                ul {
+                    display: flex; /* Change from grid to flex */
+                    gap: 32px; /* as specified 32 */
+                    list-style: none;
+                    color: var(--clr2);
+                    text-align: center;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        
+            button {
+                padding: 16px;
+                border-radius: 16px;
+            }
+        }    
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+
+            /* Ensures padding is included within the max-width */
+            box-sizing: border-box;
+            /* for spacing */
+            padding: 32px;
+    
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            /* cards gap */
+            row-gap: 32px;
+            column-gap: 32px;
+            /* grid area */
+            grid-template-areas: 
+            'card1 card1'
+            'card2 card3'
+            'card4 card4'
+            'card5 card5'
+            'card6 card6'
+            ;
+    
+
+            .movie-card {
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 16px;
+    
+                width: 100%;
+    
+                border: solid var(--clr1) 2px;
+                background-color: var(--clr3);
+    
+    
+                /* Movie Cover Img */
+                .img-container {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+    
+                /* Details of the movie */
+                .movie-details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    
+    
+                    .title {
+                        color: var(--clr2);
+                        margin: 0 16px;
+                    }
+                    p {
+                        /* because its keeps being inconsistent */
+                        min-height: 260px;
+
+                        color: var(--clr2);
+                        font-size: 1.5em;
+                        margin: 0 16px;
+                    }
+    
+                    /* WATCH NOW button */
+                    button {
+                        background-color: var(--clr4);
+    
+
+                        line-height: 1.5; 
+                        padding: 16px 0;
+                        margin: 16px;
+                        border-radius: 16px;
+                    }
+                }
+            }
+        }
+    } 
+}
